@@ -1,4 +1,4 @@
-# js-image-color-picker
+# JS Image Color Picker
 Pick color from image via javascript
 
 This is a javascript object made via this method: 
