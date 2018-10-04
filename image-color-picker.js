@@ -1,7 +1,7 @@
 var ImageColorPicker = function(img_selector, opt){
 
 	// vars
-	var x = '', y = '', canvasInitiated = false;
+	var x = '', y = '';
 	var inst = this;
 	var d = document;
 
@@ -27,11 +27,11 @@ var ImageColorPicker = function(img_selector, opt){
 	inst.canvas.style.display = 'none';
 
 	// optional public containers
-	inst.result_hex = opt.result_hex ? _(opt.result_hex) : d.createElement('input');
-	inst.result_rgb = opt.result_rgb ? _(opt.result_rgb) : d.createElement('input');
 	inst.preview = opt.preview ? _(opt.preview) : d.createElement('div');
 
 	// default
+	inst.result_hex = '';
+	inst.result_rgb = [];
 	inst.result_rgb_string = '';
 
 	// callbacks
@@ -113,7 +113,7 @@ var ImageColorPicker = function(img_selector, opt){
 	
 	// short querySelector
 	function _(el){
-		return document.querySelector(el);
+		return d.querySelector(el);
 	};
 
 	// convert rgba to hex 
